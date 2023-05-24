@@ -17,4 +17,5 @@ xgb_cl = XGBRegressor()
 
 xgb_cl.fit(movie_features, target)
 
+# Save model
 xgb_cl.save_model('xgb_model.json')
