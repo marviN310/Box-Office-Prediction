@@ -206,4 +206,4 @@ rating = st.selectbox("Age Rating:", ["0","6","G","PG","12","PG-13"
 
 if st.button('Predict Box Office'):
     price = predict(runningtime, budget, company, month, genres, rating)
-    st.success(f'The predicted Box Office is ${price[0]} Mio USD')
+    st.success(f'The predicted Box Office is ${int(price[0])} Mio USD')
