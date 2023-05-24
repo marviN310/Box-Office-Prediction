@@ -165,18 +165,18 @@ company = st.selectbox('Distribution company:', ['20th Century Studios',
                                                  'Walt Disney Studios',
                                                  'Warner Bros. Pictures', 'Other'])
 
-month = st.selectbox('Release month:', ['April',
-                                        'August',
-                                        'December',
+month = st.selectbox('Release month:', ['January',
                                         'February',
-                                        'January',
-                                        'July',
-                                        'June',
                                         'March',
+                                        'April',
                                         'May',
-                                        'November',
+                                        'June',
+                                        'July',
+                                        'August',
+                                        'September',
                                         'October',
-                                        'September'])
+                                        'November',
+                                        'December'])
 
 genres = st.selectbox("Genres:", ['Action',
                                   'Adventure',
