@@ -126,7 +126,7 @@ def predict(runningtime, budget, company, month, genres, rating):
 
 st.title('Box Office Predictor')
 
-runningtime = st.slider('Running time in minutes', 0, 250, 25)
+runningtime = st.slider('Running time in minutes', 60, 250, 100)
 
 # Streamlit number
 budget = st.slider('Budget in Mio $', 0, 500, 20)
