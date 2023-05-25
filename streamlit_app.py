@@ -97,20 +97,12 @@ months = ['Release month_April',
           'Release month_October',
           'Release month_September']
 
-ratings = ['Age Rating_(Banned)',
-           'Age Rating_0',
-           'Age Rating_12',
-           'Age Rating_16',
-           'Age Rating_16+',
-           'Age Rating_18',
-           'Age Rating_6',
-           'Age Rating_G',
-           'Age Rating_Not Rated',
-           'Age Rating_PG',
-           'Age Rating_PG-13',
-           'Age Rating_R',
-           'Age Rating_TV-14',
-           'Age Rating_Unrated']
+ratings = ['Age Rating_G',
+             'Age Rating_NC-17',
+             'Age Rating_Not Rated',
+             'Age Rating_PG',
+             'Age Rating_PG-13',
+             'Age Rating_R']
 
 
 def predict(runningtime, budget, company, month, genres, rating):
@@ -200,8 +192,8 @@ genres = st.selectbox("Genres:", ['Action',
                                   'War',
                                   'Western'])
 
-rating = st.selectbox("Age Rating:", ["0","6","G","PG","12","PG-13"
-                                       "TV-14","16","16+","R","18","Banned","Not Rated","Unrated"])
+rating = st.selectbox("Age Rating:", ["G","PG","PG-13","R","NC-17",
+                                       "Not Rated"])
 
 
 if st.button('Predict Box Office'):
