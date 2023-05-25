@@ -45,7 +45,7 @@ We choose as the prediction algorithm a simple **XGBoost** regressor.
 Since the number of observations of our data is not big, we evaluate the model using *Cross-Fold-Validation with* 5 folds.
 Because of the high skewness of the Box-Office variable, our performance metric is the *MAE* (Mean Absolute Error).
 
-+ The MAE ovr the 5 folds has a mean of approx. 75.61 Mio $ and a standard deviation of approx. 7.5 Mio $
++ The MAE of the 5 folds has a mean of approx. 75.61 Mio $ and a standard deviation of approx. 7.5 Mio $
 
 ## Streamlit application
 We then build a streamlit application trained on the whole 1979 movies.
