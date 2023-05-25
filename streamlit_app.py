@@ -106,7 +106,7 @@ ratings = ['Age Rating_G',
 
 
 def predict(runningtime, budget, company, month, genres, rating):
-    genres_one_hot = encoding_category(genres, genres_categories)
+    #genres_one_hot = encoding_category(genres, genres_categories)
     company_one_hot = encoding_category(company, company_categories)
     month_one_hot = encoding_category(month, months)
     #ratings_one_hot = encoding_category(rating, ratings)
@@ -123,8 +123,17 @@ def predict(runningtime, budget, company, month, genres, rating):
        ratings_one_hot = [0,1,0,0,0,0]
     elif rating=="Not Rated":
        ratings_one_hot = [0,1,0,0,0,0]    
+    
+    if type(genres) == list:
+        list_one_hot = [encoding_category(genre, genres_categories) for genre in genres]
+                        
+        genres_one_hot = np.sum(list_one_hot, axis=0).tolist()
         
+    else:
+        genres_one_hot = encoding_category(genres, genres_categories)
 
+        
+        
     all_list = [runningtime] + [budget] + genres_one_hot + company_one_hot + month_one_hot + ratings_one_hot
     prediction = model.predict(pd.DataFrame([all_list], columns=features))
     return prediction
@@ -184,7 +193,7 @@ month = st.selectbox('Release month:', ['January',
                                         'November',
                                         'December'])
 
-genres = st.selectbox("Genres:", ['Action',
+genres = st.multiselect("Genres:", ['Action',
                                   'Adventure',
                                   'Animation',
                                   'Biography',
