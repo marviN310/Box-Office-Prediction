@@ -179,10 +179,4 @@ def data_preprocess(movie_data):
 
 
 
-movie_data = pd.read_csv("full_movie_data.csv")
 
-movie_data_new = data_preprocess(movie_data)
-
-print(movie_data_new.info())
-
-movie_data_new.to_csv('full_movie_data_processed.csv', index=False)  # Save dataframe as csv
