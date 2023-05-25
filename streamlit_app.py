@@ -109,7 +109,21 @@ def predict(runningtime, budget, company, month, genres, rating):
     genres_one_hot = encoding_category(genres, genres_categories)
     company_one_hot = encoding_category(company, company_categories)
     month_one_hot = encoding_category(month, months)
-    ratings_one_hot = encoding_category(rating, ratings)
+    #ratings_one_hot = encoding_category(rating, ratings)
+    
+    if rating=="G"
+       ratings_one_hot = [1,0,0,0,0,0]
+    elif rating=="PG"
+       ratings_one_hot = [0,0,0,1,0,0]
+    elif rating=="PG-13"
+       ratings_one_hot = [0,0,0,0,1,0]  
+    elif rating=="R"
+       ratings_one_hot = [0,0,0,0,0,1]  
+    elif rating=="NC-17"
+       ratings_one_hot = [0,1,0,0,0,0]
+    elif rating=="Not Rated"
+       ratings_one_hot = [0,1,0,0,0,0]    
+        
 
     all_list = [runningtime] + [budget] + genres_one_hot + company_one_hot + month_one_hot + ratings_one_hot
     prediction = model.predict(pd.DataFrame([all_list], columns=features))
