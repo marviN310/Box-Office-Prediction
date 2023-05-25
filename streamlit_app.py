@@ -111,17 +111,17 @@ def predict(runningtime, budget, company, month, genres, rating):
     month_one_hot = encoding_category(month, months)
     #ratings_one_hot = encoding_category(rating, ratings)
     
-    if rating=="G"
+    if rating=="G":
        ratings_one_hot = [1,0,0,0,0,0]
-    elif rating=="PG"
+    elif rating=="PG":
        ratings_one_hot = [0,0,0,1,0,0]
-    elif rating=="PG-13"
+    elif rating=="PG-13":
        ratings_one_hot = [0,0,0,0,1,0]  
-    elif rating=="R"
+    elif rating=="R":
        ratings_one_hot = [0,0,0,0,0,1]  
-    elif rating=="NC-17"
+    elif rating=="NC-17":
        ratings_one_hot = [0,1,0,0,0,0]
-    elif rating=="Not Rated"
+    elif rating=="Not Rated":
        ratings_one_hot = [0,1,0,0,0,0]    
         
 
