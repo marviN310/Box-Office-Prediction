@@ -12,3 +12,13 @@ Deployment of simple boosted tree model to predict Box-Office using Streamlit
 + streamlit_app.py : Script to build streamlit application
 + requirements.txt : Requirements for streamlit application
 
+## Summary of project
+
+In the first step we scrap data from wikipedia pages of movies. We especially scrap data from
+the info tables of the pages. Following variables are considered
+
++ Running time (in Minutes)
++ Genre of movie (multiple possible) 
++ Distribution company
++ Release month
++ Age Rating (using MPAA rating system)
